@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Главное меню -->
+    <div id="menu">
+        <h1>Snake Game</h1>
+        <button id="newGame">New Game</button>
+    </div>
+
+    <!-- Настройки -->
+    <div id="settings" class="hidden">
+        <h2>Game Settings</h2>
+        <label for="speed">Speed (1-25): </label>
+        <input id="speed" type="number" min="1" max="25" value="10"><br>
+
+        <label for="wallCollision">Wall Collision: </label>
+        <select id="wallCollision">
+            <option value="true">Kill</option>
+            <option value="false">Wrap Around</option>
+        </select><br>
+
+        <label for="selfCollision">Self Collision: </label>
+        <select id="selfCollision">
+            <option value="true">Kill</option>
+            <option value="false">Pass Through</option>
+        </select><br>
+
+        <label for="foodCount">Food Count (1-10): </label>
+        <input id="foodCount" type="number" min="1" max="10" value="1"><br>
+
+        <button id="startGame">Start Game</button>
+        <button id="backToMenu">Back to Menu</button>
+    </div>
+
+    <!-- Игровой экран -->
+    <div id="game" class="hidden">
+        <canvas id="gameCanvas"></canvas>
+        <div id="gameOver" class="hidden">
+            <h2>Game Over</h2>
+            <button id="restartGame">Restart</button>
+            <button id="backToMenuFromGame">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
