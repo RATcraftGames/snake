@@ -1,4 +1,3 @@
-// DOM-элементы
 const menu = document.getElementById("menu");
 const settings = document.getElementById("settings");
 const game = document.getElementById("game");
